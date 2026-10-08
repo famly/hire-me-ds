@@ -1,0 +1,252 @@
+@use '../../styles/legacy-colors' as *;
+
+// Alert colours for the profile page.
+$red-hover: #e03131;
+$amber: #b26b00;
+$amber-light: #fff4e5;
+$amber-border: #f59f00;
+$info-blue: #1971c2;
+$info-light: #e7f5ff;
+
+.profile {
+    max-width: 960px;
+}
+
+.profile__empty {
+    color: $grey-muted;
+}
+
+.profile__picker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $grey-text;
+
+    select {
+        font: inherit;
+        font-weight: 400;
+        padding: 7px 10px;
+        border: 1px solid $grey-border;
+        border-radius: 6px;
+        background: #fff;
+    }
+}
+
+.profile__card {
+    background: #fff;
+    border: 1px solid $grey-light;
+    border-radius: 10px;
+    padding: 26px 28px;
+}
+
+.profile__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.profile__photo {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: cover;
+    background: $avatar-bg;
+}
+
+.profile__photo--empty {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: $grey-text;
+}
+
+.profile__heading {
+    flex: 1;
+    min-width: 220px;
+}
+
+.profile__name {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    color: $grey-text;
+}
+
+.profile__meta {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: $grey-muted;
+}
+
+.profile__actions {
+    display: flex;
+    gap: 8px;
+}
+
+.profile__remove {
+    padding: 7px 14px;
+    border: 1px solid $red;
+    border-radius: 6px;
+    background: #fff;
+    color: $red;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background: $red-hover;
+        color: #fff;
+    }
+}
+
+.profile__remove--solid {
+    background: $red;
+    color: #fff;
+}
+
+.profile__confirm {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #fde8e8;
+
+    p {
+        margin: 0 0 12px;
+        font-size: 15px;
+        color: $red;
+    }
+}
+
+.profile__confirm-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.profile__notice {
+    margin: 14px 0 0;
+    font-size: 14px;
+    color: $grey-muted;
+}
+
+.profile__tabs {
+    display: flex;
+    gap: 22px;
+    margin: 26px 0 0;
+    border-bottom: 1px solid $grey-light;
+}
+
+.profile__tab {
+    padding: 10px 2px;
+    font-size: 15px;
+    color: $grey-muted;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+.profile__tab--active {
+    color: var(--p400);
+    border-bottom-color: var(--p400);
+    font-weight: 600;
+}
+
+.profile__section {
+    padding-top: 6px;
+}
+
+.profile__section-title {
+    margin: 22px 0 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: $grey-text;
+}
+
+.profile__notes {
+    margin: 0;
+    font-size: 15px;
+    color: $grey-text;
+}
+
+.alerts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.alert--severe {
+    background: $red;
+    color: #fff;
+}
+
+.alert--mild {
+    background: $amber-light;
+    color: $amber;
+    border-left: 4px solid $amber-border;
+}
+
+.alert--info {
+    background: $info-light;
+    color: $info-blue;
+}
+
+.profile__contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    padding-top: 20px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    border: 1px solid $grey-border;
+    border-radius: 10px;
+}
+
+.contact__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.contact__name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $grey-text;
+}
+
+.contact__badge {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: $green;
+    color: #fff;
+}
+
+.contact__relation {
+    font-size: 13px;
+    color: $grey-muted;
+}
+
+.contact__phone {
+    font-size: 15px;
+    text-decoration: none;
+}

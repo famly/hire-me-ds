@@ -1,0 +1,116 @@
+@use '../../styles/legacy-colors' as *;
+
+.roster {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid $grey-light;
+    overflow: hidden;
+}
+
+.roster__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid $grey-light;
+}
+
+.roster__title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: $grey-text;
+}
+
+.roster__count {
+    font-size: 13px;
+    color: $grey-muted;
+}
+
+.roster__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.roster__empty {
+    padding: 32px 20px;
+    color: $grey-muted;
+}
+
+.child-row {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 20px;
+    border-bottom: 1px solid $grey-border;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+        background: hsla(240, 12%, 98%, 1);
+    }
+}
+
+.child-row--selected {
+    border-left-color: var(--p400);
+    background: var(--p200);
+
+    &:hover {
+        background: var(--p200);
+    }
+}
+
+.child-row__name {
+    flex: 1;
+    font-size: 15px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.avatar--initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $avatar-bg;
+    color: $grey-text;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status {
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status--in {
+    background: $green;
+    color: #fff;
+}
+
+.status--out {
+    background: #f0f0f3;
+    color: $grey-muted;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-size: 13px;
+    color: $grey-muted;
+}
+
+.pagination__buttons {
+    display: flex;
+    gap: 8px;
+}

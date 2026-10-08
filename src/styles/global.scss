@@ -1,0 +1,58 @@
+@use './legacy-colors' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Matter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: $grey-text;
+    background: #f9f9fa;
+}
+
+a {
+    color: var(--p400);
+}
+
+// Shared button styles, used across the app.
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    cursor: pointer;
+    outline: none;
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+    }
+}
+
+.btn--primary {
+    background: $purple;
+    color: #fff;
+
+    &:hover:not(:disabled) {
+        background: $purple-hover;
+    }
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--p400);
+    border-color: $grey-border;
+
+    &:hover:not(:disabled) {
+        background: $purple-light;
+    }
+}
